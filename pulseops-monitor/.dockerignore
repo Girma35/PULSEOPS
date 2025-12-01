@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.env
+logs
+.git
+Dockerfile
+docker/
+pulseops-monitor/.gitignore

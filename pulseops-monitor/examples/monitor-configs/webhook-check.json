@@ -1,0 +1,5 @@
+{
+  "name": "example-webhook",
+  "endpoint": "https://example.com/webhook",
+  "expectedStatus": 200
+}

@@ -1,0 +1,1 @@
+exports.now = () => Date.now();

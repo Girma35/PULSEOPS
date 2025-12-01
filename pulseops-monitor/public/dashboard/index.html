@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PulseOps — Dashboard</title>
+    <link rel="stylesheet" href="/dashboard/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>PulseOps — Dashboard</h1>
+    </header>
+    <main>
+      <section id="monitors">
+        <h2>Monitors</h2>
+        <div id="monitor-list">Loading…</div>
+
+        <div id="create-monitor">
+          <h3>Create Monitor</h3>
+          <form id="monitor-form">
+            <label>
+              Name<br>
+              <input type="text" id="m-name" required />
+            </label>
+            <label>
+              URL<br>
+              <input type="url" id="m-url" placeholder="https://example.com" required />
+            </label>
+            <label>
+              Interval (sec)<br>
+              <input type="number" id="m-interval" value="60" min="10" />
+            </label>
+            <div>
+              <button type="submit" class="btn">Create</button>
+            </div>
+            <div id="create-result" style="margin-top:8px;color:#900"></div>
+          </form>
+        </div>
+        <div id="quick-check" style="margin-top:18px;border-top:1px solid #ddd;padding-top:12px;">
+          <h3>Quick Check</h3>
+          <form id="quick-check-form">
+            <label>
+              URL to check<br>
+              <input type="url" id="qc-url" placeholder="https://example.com/health" required />
+            </label>
+            <label>
+              Timeout (ms)<br>
+              <input type="number" id="qc-timeout" value="10000" min="1000" />
+            </label>
+            <div style="margin-top:8px;">
+              <button type="submit" class="btn">Run Quick Check</button>
+            </div>
+            <div id="qc-result" style="margin-top:8px;color:#090"></div>
+          </form>
+        </div>
+      </section>
+      <section id="results">
+        <h2>Recent Results</h2>
+        <div id="results-list">Select a monitor to view recent checks.</div>
+      </section>
+    </main>
+    <script src="/dashboard/main.js"></script>
+  </body>
+</html>
